@@ -1,0 +1,355 @@
+/* Bootstrap css */
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
+
+/* Propeller typography */
+@import "https://propeller.in/components/typography/css/typography.css";
+
+/* Propeller icons */
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://propeller.in/components/icons/css/google-icons.css";
+
+/* Propeller button */
+@import "https://propeller.in/components/button/css/button.css";
+
+/* Propeller input */
+@import "https://propeller.in/components/textfield/css/textfield.css";
+
+/* Propeller table */
+@import "https://propeller.in/components/table/css/table.css";
+
+/* Propeller card */
+@import "https://propeller.in/components/card/css/card.css";
+
+/* Datatable bootstrap */
+@import "https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css";
+
+/* Datatable select */
+@import "https://cdn.datatables.net/select/1.2.0/css/select.dataTables.min.css";
+
+/* Propeller Datatable */
+@import "https://propeller.in/components/data-table/css/pmd-datatable.css";
+
+/* Propeller alert */
+@import "https://propeller.in/components/alert/css/alert.css";
+
+/* Propeller checkbox */
+@import "http://propeller.in/components/checkbox/css/checkbox.css";
+
+/* Propeller toggle switch */
+@import "http://propeller.in/components/toggle-switch/css/toggle-switch.css";
+
+/* Bootstrap datetimepicker */
+@import "http://propeller.in/components/datetimepicker/css/bootstrap-datetimepicker.css";
+
+/* Propeller datetimepicker */
+@import "http://propeller.in/components/datetimepicker/css/pmd-datetimepicker.css";
+
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 100vw;
+  overflow: scroll;
+}
+
+.admin-panel {
+  position: relative;
+  background-color: #000;
+  color: #FFF;
+  flex: 0 0 230px;
+  min-height: 100vh;
+}
+
+.green {
+  color: #6bc241;
+}
+
+.admin-panel-title {
+  font-size: 22px;
+  background-color: #000;
+  padding: 10px;
+  color: #FFF;
+}
+
+.admin-panel-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.admin-panel-section-title {
+  letter-spacing: .5px;
+  font-weight: 700;
+  font-size: 11px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.admin-panel-tab {
+  color: #E7E7E7;
+  font-weight: 500;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-panel-tab.selected {
+  background-color: #222;
+}
+
+.admin-panel-tab span {
+  display: none;
+}
+
+.admin-panel-tab.selected span {
+  display: block;
+}
+
+.admin-panel-logout {
+  color: #E7E7E7;
+  font-weight: 500;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.admin-panel-logout:hover {
+  background-color: #222;
+}
+
+.admin-panel-logout span {
+  margin-right: 10px;
+}
+
+.admin-main {
+  flex: 1;
+  background-color: #F7F7F7;
+  min-height: 100vh;
+  padding: 25px;
+}
+
+.admin-main td.info-toggle:before {
+  content: '\f0fe';
+  font-family: FontAwesome;
+}
+
+.admin-main .match-instance-detail {
+  width: 100%;
+}
+
+.content-container {
+  display: none;
+}
+
+.content-container:first-child {
+  display: block;
+}
+
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #3f7b21;
+  background: -webkit-linear-gradient(to top, #061700, #3f7b21);
+  background: linear-gradient(to top, #061700, #3f7b21);
+}
+
+.login-container {
+  background-color: #FFF;
+  width: 50%;
+  padding: 75px 50px 50px 50px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 30px -3px rgba(0,0,0,0.8);
+  position: relative;
+}
+
+.login-container .admin-panel-title {
+  margin-bottom: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.pmd-textfield-focused {
+  background-color: #6bc241!important;
+}
+
+.login-container .btn {
+  background-color: #6bc241;
+}
+
+.login-container .btn:hover {
+  background-color: #68be3f;
+}
+
+#error-alert {
+  display: none;
+}
+
+.admin-panel .menu {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 22px;
+  display: none;
+  cursor: pointer;
+}
+
+.admin-panel .menu:hover {
+  color: #dcdcdc;
+}
+
+.posts-content {
+  padding: 25px;
+  position: relative;
+  padding-top: 225px;
+}
+
+.posts-content textarea {
+  resize: none;
+}
+
+.post-meta-container {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.post-meta-container .post-meta-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 0;
+}
+
+.post-meta-container .post-controls {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 0 20px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.post-meta-container .post-controls button {
+  margin-left: 10px;
+}
+
+.post-meta-container .post-controls button.pmd-btn-outline {
+  border-color: #6bc241;
+  color: #6bc241;
+}
+
+.post-meta-container .post-controls button.pmd-btn-outline:hover,
+.post-meta-container .post-controls button.pmd-btn-outline:focus {
+  border-color: #6bc241;
+  background-color: #6bc241;
+  color: #FFF;
+}
+
+.post-meta-container .pmd-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-meta-container .pmd-switch label input[type="checkbox"]:checked + .pmd-switch-label::after, .togglebutton-default label input[type="checkbox"]:checked + .pmd-switch-label::after {
+  background-color: #68be3f; 
+}
+
+.post-meta-container .pmd-switch label input[type="checkbox"]:checked + .pmd-switch-label, .togglebutton-default label input[type="checkbox"]:checked + .pmd-switch-label {
+  background-color: rgba(104, 190, 63, 0.5);
+}
+
+.post-meta-container #post-id {
+  margin-right: auto;
+  font-size: 10px;
+  color: #555;
+}
+
+.post-published-label {
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    width: 90%;
+  }
+
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .admin-main {
+    padding: 15px;
+  }
+
+  .admin-panel {
+    flex: 0 0 100%;
+    min-height: 0;
+    height: 55px;
+    overflow: hidden;
+  }
+
+  .admin-panel .admin-panel-section,
+  .admin-panel .admin-panel-logout {
+    display: none;
+  }
+
+  .admin-panel .menu {
+    display: block;
+  }
+
+  .admin-panel.menu-open {
+    height: auto;
+  }
+
+  .admin-panel.menu-open .admin-panel-section,
+  .admin-panel.menu-open .admin-panel-logout {
+    display: flex;
+  }
+
+  .admin-panel.menu-open .admin-panel-logout {
+    position: relative;
+    justify-content: flex-start;
+  }
+}

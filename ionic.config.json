@@ -1,0 +1,8 @@
+{
+  "name": "oddsfinder",
+  "app_id": "0a82a40f",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

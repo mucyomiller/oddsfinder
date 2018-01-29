@@ -1,0 +1,132 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+$green : #6bc241;
+$purple : #b829aa;
+$red: #e74c3c;
+$white: #FFF;
+$black: #000;
+
+.text-accent--green {
+  color: $green;
+}
+
+.odds-hero {
+  height: 200px;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(107,194,65,0.9), rgba(74,135,44,0.9)), url('../assets/images/hero-bg.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.odds-hero span {
+    font-size: 28px;
+    font-weight: bold;
+    color: $white;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content.with-hero .scroll-content {
+  padding-top: 210px!important;
+}
+
+ion-navbar.logo .toolbar-background {
+  background-color: $black!important;
+}
+
+ion-navbar.logo .title {
+  padding: 0 15px 1px!important;
+}
+
+ion-navbar.logo .toolbar-title {
+  font-size: 22px!important;
+  padding: 0!important;
+  text-align: left!important;
+  color: $white!important;
+}
+
+ion-list-header {
+  background-color: $green!important;
+  color: $white!important;
+  font-weight: bold!important;
+}
+
+ion-item.invalid ion-label,
+ion-item.invalid input {
+  color: $red;
+}
+
+.password-rules {
+  font-size: 10px;
+  color: #666;
+}
+
+li.invalid {
+  color: $red;
+}
+
+li.valid {
+  color: $green;
+}
+
+.location-notification ion-label {
+  font-size: 10px;
+  white-space: pre-wrap;
+}
+
+.content--logged-in {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(74, 135, 44, 0.9)), url(../assets/images/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.content--logged-in .scroll-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.logged-in-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+}
+
+.logged-in-container ion-icon {
+  font-size: 80px;
+  color: $green;
+  background: #FFF;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.logged-in-container button {
+
+}
