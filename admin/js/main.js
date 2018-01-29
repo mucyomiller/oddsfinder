@@ -1,7 +1,7 @@
 class AdminManager {
   constructor() {
     // this.apiRoot = 'http://localhost:3080/api/';
-    this.apiRoot = 'https://oddsfinder-api.herokuapp.com/api/';
+    this.apiRoot = 'https://oddsfinderapi.herokuapp.com/api/';
     this.matches = [];
     this.currentUser = null;
   }
@@ -150,7 +150,7 @@ class AdminManager {
       $('#email').val('');
       $('#password').val('');
 
-      // $.post('https://oddsfinder-api.herokuapp.com/api/users', {
+      // $.post('https://oddsfinderapi.herokuapp.com/api/users', {
       //   email: email,
       //   password: password,
       //   member_type: 'admin'
@@ -162,7 +162,7 @@ class AdminManager {
       //   }
       // })
 
-      $.post('https://oddsfinder-api.herokuapp.com/api/users/login/admin', {
+      $.post('https://oddsfinderapi.herokuapp.com/api/users/login/admin', {
         email: email,
         password: password
       }, response => {
@@ -207,7 +207,7 @@ class AdminManager {
       let content = $('#post-content').val();
       let id = $('#post-id').text();
 
-      // $.post('https://oddsfinder-api.herokuapp.com/api/posts/', {
+      // $.post('https://oddsfinderapi.herokuapp.com/api/posts/', {
       //   author: author,
       //   date: date,
       //   published: published,
@@ -222,7 +222,7 @@ class AdminManager {
       // })
 
       $.ajax({
-        url: 'https://oddsfinder-api.herokuapp.com/api/posts/' + id,
+        url: 'https://oddsfinderapi.herokuapp.com/api/posts/' + id,
         type: 'PUT',
         data: {
           author: author,
@@ -243,7 +243,7 @@ class AdminManager {
   }
 
   InitPostRetrieve() {
-    $.get('http://oddsfinder-api.herokuapp.com/api/posts/', posts => {
+    $.get('http://oddsfinderapi.herokuapp.com/api/posts/', posts => {
       if (posts.length >= 1) {
         let post = posts[0];
         $('#post-author').val(post.author);
@@ -288,7 +288,7 @@ $(document).ready(() => {
 $(document).ready(function() {
   $.fn.dataTable.ext.errMode = 'none';
 
-  $.get('https://oddsfinder-api.herokuapp.com/api/matches', matches => {
+  $.get('https://oddsfinderapi.herokuapp.com/api/matches', matches => {
     let table = $('#matches-table').DataTable({
       data: matches,
       responsive: {
@@ -410,7 +410,7 @@ $(document).ready(function() {
 
   });
 
-  $.get('https://oddsfinder-api.herokuapp.com/api/users', users => {
+  $.get('https://oddsfinderapi.herokuapp.com/api/users', users => {
     let table = $('#users-table').DataTable({
       data: users,
       responsive: {

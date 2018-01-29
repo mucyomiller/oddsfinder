@@ -1,5 +1,5 @@
 {
-  "name": "oddsfinder",
+  "name": "oddsfinderapp",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -39,5 +39,5 @@
     "@ionic/app-scripts": "3.0.0",
     "typescript": "2.3.4"
   },
-  "description": "An Ionic project"
+  "description": "An odds finder app"
 }

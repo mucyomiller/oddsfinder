@@ -53,7 +53,7 @@ export class MatchPage {
     var options = {
       message: 'Check out these odds.', // not supported on some apps (Facebook, Instagram)
       subject: 'OddsFinder Odds', // fi. for email
-      url: 'https://oddsfinder-app.herokuapp.com',
+      url: 'https://oddsfinderapp.herokuapp.com',
       chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title
     }
     this.socialSharing.shareWithOptions(options)
