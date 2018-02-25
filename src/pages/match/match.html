@@ -16,6 +16,7 @@
 
 
 <ion-content>
+    <img src="../../assets/images/ads.png" />
   <ion-list *ngIf="match">
     <!-- <ion-list-header>
       <span class="psuedokey" item-end>{{ match.PsuedoKey }}</span>
@@ -33,7 +34,12 @@
         <img *ngIf="matchInstance.Service === 'PrincessBet'" src="assets/images/princessbet.png">
         <img *ngIf="matchInstance.Service === 'BetPawa'" src="assets/images/betpawa.png">
         <img *ngIf="matchInstance.Service === 'LovingBet'" src="assets/images/lovingbet.png">
-        <img *ngIf="matchInstance.Service === 'SportPesa'" src="assets/images/sportpesa.png">
+        <img *ngIf="matchInstance.Service === 'SportPesa'" src="assets/images/sportpesa.jpg">
+        <img *ngIf="matchInstance.Service === 'BetIn'" src="assets/images/betin.png">
+        <img *ngIf="matchInstance.Service === 'Betika'" src="assets/images/betika.png">
+        <img *ngIf="matchInstance.Service === '1xBet'" src="assets/images/1xbet.png">
+
+        <h5 style="color:black;font-weight: bold">{{matchInstance.Service}}</h5>
         <div item-end>
           <span (click)="share(matchInstance)" class="share">Share</span>
           <span>{{ matchInstance.Team1.Price }}</span>

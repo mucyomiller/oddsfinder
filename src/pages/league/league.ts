@@ -28,6 +28,9 @@ export class LeaguePage {
         this.matches = this.matches.sort((a, b) => {
           return a.League.localeCompare(b.League);
         })
+        // this.matches = this.matches.sort((a, b) => {
+        //       return new Date(b.Date).getTime() - new Date(a.date).getTime();
+        //    })
         if (this.matches.length > 20) {
           this.infiniteCount += 20;
           this.displayedMatches = this.matches.slice(0,this.infiniteCount - 1);
