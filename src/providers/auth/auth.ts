@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise';
 
 import { LoadingController } from 'ionic-angular';
 
-import { Storage } from '@ionic/Storage';
+import { Storage } from '@ionic/storage';
 import { Events } from 'ionic-angular';
 
 @Injectable()

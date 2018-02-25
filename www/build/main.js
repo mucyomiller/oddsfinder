@@ -4,71 +4,10 @@ webpackJsonp([3],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchDetailPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_social_sharing__ = __webpack_require__(82);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var MatchDetailPage = (function () {
-    function MatchDetailPage(navCtrl, navParams, viewCtrl, socialSharing) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.viewCtrl = viewCtrl;
-        this.socialSharing = socialSharing;
-    }
-    MatchDetailPage.prototype.ionViewDidLoad = function () {
-        this.matchInstance = this.navParams.get('matchInstance');
-    };
-    MatchDetailPage.prototype.dismiss = function () {
-        this.viewCtrl.dismiss();
-    };
-    MatchDetailPage.prototype.share = function (matchInstance) {
-        var options = {
-            message: 'Check out these odds.',
-            subject: 'OddsFinder Odds',
-            url: 'https://oddsfinder-app.herokuapp.com',
-            chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title
-        };
-        this.socialSharing.shareWithOptions(options)
-            .then(function (data) {
-            console.log(data);
-        })
-            .catch(function (err) {
-            console.log(err);
-        });
-    };
-    return MatchDetailPage;
-}());
-MatchDetailPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-match-detail',template:/*ion-inline-start:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/match-detail/match-detail.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center *ngIf="!matchInstance">Match</ion-title>\n    <ion-title text-center *ngIf="matchInstance">{{ matchInstance.Team1.Name }} vs {{ matchInstance.Team2.Name }}</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title item-start>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-list *ngIf="matchInstance">\n    <!-- <ion-list-header>\n      <span class="psuedokey" item-end>{{ matchInstance.PsuedoKey }}</span>\n    </ion-list-header> -->\n    <div>\n      <ion-list-header class="match-league">\n        {{ matchInstance.Region }}\n      </ion-list-header>\n      <ion-item class="match-instance">\n        <img *ngIf="matchInstance.Service === \'Betway\'" src="../../assets/images/betway.png">\n        <img *ngIf="matchInstance.Service === \'MerryBet\'" src="../../assets/images/merrybet.png">\n        <img *ngIf="matchInstance.Service === \'PrincessBet\'" src="../../assets/images/princessbet.png">\n        <img *ngIf="matchInstance.Service === \'BetPawa\'" src="../../assets/images/betpawa.png">\n        <img *ngIf="matchInstance.Service === \'LovingBet\'" src="../../assets/images/lovingbet.png">\n        <div item-end>\n          <span (click)="share(matchInstance)" class="share">Share</span>\n          <span>{{ matchInstance.Team1.Price }}</span>\n          <span>{{ matchInstance.DrawPrice }}</span>\n          <span>{{ matchInstance.Team2.Price }}</span>\n        </div>\n      </ion-item>\n    </div>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/match-detail/match-detail.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_social_sharing__["a" /* SocialSharing */]])
-], MatchDetailPage);
-
-//# sourceMappingURL=match-detail.js.map
-
-/***/ }),
-
-/***/ 108:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeaguePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_match_match__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_match_match__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__match_match__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -150,12 +89,73 @@ var LeaguePage = (function () {
 }());
 LeaguePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-league',template:/*ion-inline-start:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/league/league.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>{{ league }}</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title item-start>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <button class="match-button" ion-item *ngFor="let match of displayedMatches" (click)="matchSelected(match)">\n      <span>{{ match.Team1 }} vs {{ match.Team2 }}</span>\n      <span item-end>{{ match.League }}</span>\n    </button>  \n  </ion-list>\n\n  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n    <ion-infinite-scroll-content></ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>\n'/*ion-inline-end:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/league/league.html"*/,
+        selector: 'page-league',template:/*ion-inline-start:"/home/miller/webs/oddsfinderapp/src/pages/league/league.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>{{ league }}</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title item-start>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <button class="match-button" ion-item *ngFor="let match of displayedMatches" (click)="matchSelected(match)">\n      <span>{{ match.Team1 }} vs {{ match.Team2 }}</span>\n      <span item-end>{{ match.League }}</span>\n    </button>  \n  </ion-list>\n\n  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n    <ion-infinite-scroll-content></ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>\n'/*ion-inline-end:"/home/miller/webs/oddsfinderapp/src/pages/league/league.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_match_match__["a" /* MatchProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
 ], LeaguePage);
 
 //# sourceMappingURL=league.js.map
+
+/***/ }),
+
+/***/ 108:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchDetailPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_social_sharing__ = __webpack_require__(84);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MatchDetailPage = (function () {
+    function MatchDetailPage(navCtrl, navParams, viewCtrl, socialSharing) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
+        this.socialSharing = socialSharing;
+    }
+    MatchDetailPage.prototype.ionViewDidLoad = function () {
+        this.matchInstance = this.navParams.get('matchInstance');
+    };
+    MatchDetailPage.prototype.dismiss = function () {
+        this.viewCtrl.dismiss();
+    };
+    MatchDetailPage.prototype.share = function (matchInstance) {
+        var options = {
+            message: 'Check out these odds.',
+            subject: 'OddsFinder Odds',
+            url: 'https://oddsfinderapp.herokuapp.com',
+            chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title
+        };
+        this.socialSharing.shareWithOptions(options)
+            .then(function (data) {
+            console.log(data);
+        })
+            .catch(function (err) {
+            console.log(err);
+        });
+    };
+    return MatchDetailPage;
+}());
+MatchDetailPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-match-detail',template:/*ion-inline-start:"/home/miller/webs/oddsfinderapp/src/pages/match-detail/match-detail.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center *ngIf="!matchInstance">Match</ion-title>\n    <ion-title text-center *ngIf="matchInstance">{{ matchInstance.Team1.Name }} vs {{ matchInstance.Team2.Name }}</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title item-start>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-list *ngIf="matchInstance">\n    <!-- <ion-list-header>\n      <span class="psuedokey" item-end>{{ matchInstance.PsuedoKey }}</span>\n    </ion-list-header> -->\n    <div>\n      <ion-list-header class="match-league">\n        {{ matchInstance.Region }}\n      </ion-list-header>\n      <ion-item class="match-instance">\n        <img *ngIf="matchInstance.Service === \'Betway\'" src="../../assets/images/betway.png">\n        <img *ngIf="matchInstance.Service === \'MerryBet\'" src="../../assets/images/merrybet.png">\n        <img *ngIf="matchInstance.Service === \'PrincessBet\'" src="../../assets/images/princessbet.png">\n        <img *ngIf="matchInstance.Service === \'BetPawa\'" src="../../assets/images/betpawa.png">\n        <img *ngIf="matchInstance.Service === \'LovingBet\'" src="../../assets/images/lovingbet.png">\n        <img *ngIf="matchInstance.Service === \'SportPesa\'" src="../../assets/images/sportpesa.png">\n        <div item-end>\n          <span (click)="share(matchInstance)" class="share">Share</span>\n          <span>{{ matchInstance.Team1.Price }}</span>\n          <span>{{ matchInstance.DrawPrice }}</span>\n          <span>{{ matchInstance.Team2.Price }}</span>\n        </div>\n      </ion-item>\n    </div>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/miller/webs/oddsfinderapp/src/pages/match-detail/match-detail.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_social_sharing__["a" /* SocialSharing */]])
+], MatchDetailPage);
+
+//# sourceMappingURL=match-detail.js.map
 
 /***/ }),
 
@@ -181,15 +181,15 @@ webpackEmptyAsyncContext.id = 116;
 
 var map = {
 	"../pages/league/league.module": [
-		282,
+		281,
 		2
 	],
 	"../pages/match-detail/match-detail.module": [
-		283,
+		282,
 		1
 	],
 	"../pages/match/match.module": [
-		281,
+		283,
 		0
 	]
 };
@@ -241,7 +241,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/tabs/tabs.html"*/'<ion-tabs selectedIndex="2">\n  <ion-tab [root]="tab1Root" tabTitle="Login" tabIcon="contact"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Popular Games" tabIcon="football"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Top Leagues" tabIcon="trophy"></ion-tab>\n  <!-- <ion-tab [root]="tab4Root" tabTitle="Settings" tabIcon="settings"></ion-tab> -->\n</ion-tabs>\n'/*ion-inline-end:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/tabs/tabs.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/miller/webs/oddsfinderapp/src/pages/tabs/tabs.html"*/'<ion-tabs selectedIndex="2">\n  <ion-tab [root]="tab1Root" tabTitle="Login" tabIcon="contact"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Popular Games" tabIcon="football"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Top Leagues" tabIcon="trophy"></ion-tab>\n  <!-- <ion-tab [root]="tab4Root" tabTitle="Settings" tabIcon="settings"></ion-tab> -->\n</ion-tabs>\n'/*ion-inline-end:"/home/miller/webs/oddsfinderapp/src/pages/tabs/tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -257,7 +257,7 @@ TabsPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_match_match__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_match_match__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__match_match__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -334,7 +334,7 @@ var MatchesPage = (function () {
 }());
 MatchesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-matches',template:/*ion-inline-start:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/matches/matches.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>Popular Matches</ion-title>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button class="match-button" ion-item *ngFor="let match of displayedMatches" (click)="matchSelected(match)">\n      <span>{{ match.Team1 }} vs {{ match.Team2 }}</span>\n      <span item-end>{{ match.League }}</span>\n    </button>  \n  </ion-list>\n\n  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n    <ion-infinite-scroll-content></ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/matches/matches.html"*/
+        selector: 'page-matches',template:/*ion-inline-start:"/home/miller/webs/oddsfinderapp/src/pages/matches/matches.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>Popular Matches</ion-title>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button class="match-button" ion-item *ngFor="let match of displayedMatches" (click)="matchSelected(match)">\n      <span>{{ match.Team1 }} vs {{ match.Team2 }}</span>\n      <span item-end>{{ match.League }}</span>\n    </button>  \n  </ion-list>\n\n  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n    <ion-infinite-scroll-content></ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/home/miller/webs/oddsfinderapp/src/pages/matches/matches.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__providers_match_match__["a" /* MatchProvider */]])
 ], MatchesPage);
@@ -352,9 +352,9 @@ MatchesPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__ = __webpack_require__(206);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -653,7 +653,7 @@ __decorate([
 ], LoginPage.prototype, "content", void 0);
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>Login</ion-title>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="with-hero" padding *ngIf="!authProvider.currentUser">\n\n  <div class="odds-hero">\n    <span>Login for the best local odds and a personalised experience!</span>\n  </div>\n\n  <ion-segment [(ngModel)]="authType">\n    <ion-segment-button value="login">\n      Login\n    </ion-segment-button>\n    <ion-segment-button value="register">\n      Register\n    </ion-segment-button>\n  </ion-segment>\n\n  <div [ngSwitch]="authType">\n    <ion-list *ngSwitchCase="\'login\'">\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.email}">\n        <ion-label floating>Email Address</ion-label>\n        <ion-input type="email" [(ngModel)]="user.email"></ion-input>\n      </ion-item>\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.password}">\n        <ion-label floating>Password</ion-label>\n        <ion-input type="password" [(ngModel)]="user.password" (focus)="passwordFocus = true" (focusout)="passwordFocus = false" (keyup)="validatePassword()" (keyup.enter)="loginUser()"></ion-input>\n      </ion-item>\n\n      <div class="password-rules" *ngIf="passwordFocus">\n        <ul>\n          <li [ngClass]="{\'invalid\': !passwordRules.minChars, \'valid\': passwordRules.minChars}">Password must contain at least 6 characters.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.maxChars, \'valid\': passwordRules.maxChars}">Password must be shorter than 50 characters.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.minNumbers, \'valid\': passwordRules.minNumbers}">Password must contain at least 1 number.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.minLetters, \'valid\': passwordRules.minLetters}">Password must contain at least 1 letter.</li>\n        </ul>\n      </div>\n\n      <button ion-button block icon-left (click)="loginUser()">\n        <ion-icon name="contact" item-start></ion-icon>\n        Login\n      </button>\n\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'register\'">\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.mobile_number}">\n        <ion-label floating>Mobile Number</ion-label>\n        <ion-input type="tel" [(ngModel)]="user.mobile_number"></ion-input>\n      </ion-item>\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.football_team}">\n        <ion-label floating>Football Team</ion-label>\n        <ion-input type="text" [(ngModel)]="user.football_team"></ion-input>\n      </ion-item>\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.email}">\n        <ion-label floating>Email Address</ion-label>\n        <ion-input type="email" [(ngModel)]="user.email"></ion-input>\n      </ion-item>\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.password}">\n        <ion-label floating>Password</ion-label>\n        <ion-input type="password" [(ngModel)]="user.password" (focus)="passwordFocus = true" (focusout)="passwordFocus = false" (keyup)="validatePassword()"></ion-input>\n      </ion-item>\n\n      <div class="password-rules" *ngIf="passwordFocus">\n        <ul>\n          <li [ngClass]="{\'invalid\': !passwordRules.minChars, \'valid\': passwordRules.minChars}">Password must contain at least 6 characters.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.maxChars, \'valid\': passwordRules.maxChars}">Password must be shorter than 50 characters.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.minNumbers, \'valid\': passwordRules.minNumbers}">Password must contain at least 1 number.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.minLetters, \'valid\': passwordRules.minLetters}">Password must contain at least 1 letter.</li>\n        </ul>\n      </div>\n\n      <ion-item class="location-notification">\n        <ion-label> Use My Location to provide me with personalized odds.</ion-label>\n        <ion-toggle [(ngModel)]="allowUserLocation"></ion-toggle>\n      </ion-item>\n\n      <ion-item *ngIf="allowUserLocation === false">\n        <ion-label floating>Country</ion-label>\n        <ion-select [(ngModel)]="user.country">\n          <ion-option value="{{country}}" *ngFor="let country of countryList">{{country}}</ion-option>\n        </ion-select>\n      </ion-item>\n\n\n      <button ion-button block icon-left (click)="createUser()">\n        <ion-icon name="contact" item-start></ion-icon>\n        Register\n      </button>\n\n    </ion-list>\n    \n  </div>\n</ion-content>\n\n<ion-content class="content--logged-in" padding *ngIf="authProvider.currentUser">\n  <div class="logged-in-container" *ngIf="authProvider.currentUser">\n      <ion-icon name="checkbox"></ion-icon>\n      <h1>{{authProvider.currentUser.email}}</h1>\n      <p>Thanks for signing in again!</p>\n      <button ion-button block (click)="logoutUser()">\n        Logout\n      </button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/login/login.html"*/
+        selector: 'page-login',template:/*ion-inline-start:"/home/miller/webs/oddsfinderapp/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>Login</ion-title>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="with-hero" padding *ngIf="!authProvider.currentUser">\n\n  <div class="odds-hero">\n    <span>Login for the best local odds and a personalised experience!</span>\n  </div>\n\n  <ion-segment [(ngModel)]="authType">\n    <ion-segment-button value="login">\n      Login\n    </ion-segment-button>\n    <ion-segment-button value="register">\n      Register\n    </ion-segment-button>\n  </ion-segment>\n\n  <div [ngSwitch]="authType">\n    <ion-list *ngSwitchCase="\'login\'">\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.email}">\n        <ion-label floating>Email Address</ion-label>\n        <ion-input type="email" [(ngModel)]="user.email"></ion-input>\n      </ion-item>\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.password}">\n        <ion-label floating>Password</ion-label>\n        <ion-input type="password" [(ngModel)]="user.password" (focus)="passwordFocus = true" (focusout)="passwordFocus = false" (keyup)="validatePassword()" (keyup.enter)="loginUser()"></ion-input>\n      </ion-item>\n\n      <div class="password-rules" *ngIf="passwordFocus">\n        <ul>\n          <li [ngClass]="{\'invalid\': !passwordRules.minChars, \'valid\': passwordRules.minChars}">Password must contain at least 6 characters.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.maxChars, \'valid\': passwordRules.maxChars}">Password must be shorter than 50 characters.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.minNumbers, \'valid\': passwordRules.minNumbers}">Password must contain at least 1 number.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.minLetters, \'valid\': passwordRules.minLetters}">Password must contain at least 1 letter.</li>\n        </ul>\n      </div>\n\n      <button ion-button block icon-left (click)="loginUser()">\n        <ion-icon name="contact" item-start></ion-icon>\n        Login\n      </button>\n\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'register\'">\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.mobile_number}">\n        <ion-label floating>Mobile Number</ion-label>\n        <ion-input type="tel" [(ngModel)]="user.mobile_number"></ion-input>\n      </ion-item>\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.football_team}">\n        <ion-label floating>Football Team</ion-label>\n        <ion-input type="text" [(ngModel)]="user.football_team"></ion-input>\n      </ion-item>\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.email}">\n        <ion-label floating>Email Address</ion-label>\n        <ion-input type="email" [(ngModel)]="user.email"></ion-input>\n      </ion-item>\n\n      <ion-item [ngClass]="{\'invalid\': !formFields.password}">\n        <ion-label floating>Password</ion-label>\n        <ion-input type="password" [(ngModel)]="user.password" (focus)="passwordFocus = true" (focusout)="passwordFocus = false" (keyup)="validatePassword()"></ion-input>\n      </ion-item>\n\n      <div class="password-rules" *ngIf="passwordFocus">\n        <ul>\n          <li [ngClass]="{\'invalid\': !passwordRules.minChars, \'valid\': passwordRules.minChars}">Password must contain at least 6 characters.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.maxChars, \'valid\': passwordRules.maxChars}">Password must be shorter than 50 characters.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.minNumbers, \'valid\': passwordRules.minNumbers}">Password must contain at least 1 number.</li>\n          <li [ngClass]="{\'invalid\': !passwordRules.minLetters, \'valid\': passwordRules.minLetters}">Password must contain at least 1 letter.</li>\n        </ul>\n      </div>\n\n      <ion-item class="location-notification">\n        <ion-label> Use My Location to provide me with personalized odds.</ion-label>\n        <ion-toggle [(ngModel)]="allowUserLocation"></ion-toggle>\n      </ion-item>\n\n      <ion-item *ngIf="allowUserLocation === false">\n        <ion-label floating>Country</ion-label>\n        <ion-select [(ngModel)]="user.country">\n          <ion-option value="{{country}}" *ngFor="let country of countryList">{{country}}</ion-option>\n        </ion-select>\n      </ion-item>\n\n\n      <button ion-button block icon-left (click)="createUser()">\n        <ion-icon name="contact" item-start></ion-icon>\n        Register\n      </button>\n\n    </ion-list>\n    \n  </div>\n</ion-content>\n\n<ion-content class="content--logged-in" padding *ngIf="authProvider.currentUser">\n  <div class="logged-in-container" *ngIf="authProvider.currentUser">\n      <ion-icon name="checkbox"></ion-icon>\n      <h1>{{authProvider.currentUser.email}}</h1>\n      <p>Thanks for signing in again!</p>\n      <button ion-button block (click)="logoutUser()">\n        Logout\n      </button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/miller/webs/oddsfinderapp/src/pages/login/login.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
 ], LoginPage);
@@ -669,12 +669,12 @@ LoginPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_Storage__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -698,8 +698,8 @@ var AuthProvider = (function () {
         this.storage = storage;
         this.loadingCtrl = loadingCtrl;
         this.currentUser = null;
-        this.apiRoot = 'http://localhost:3080/api/';
-        // this.apiRoot = 'https://oddsfinder-api.herokuapp.com/api/';
+        // this.apiRoot = 'http://localhost:3080/api/';
+        this.apiRoot = 'https://oddsfinderapi.herokuapp.com/api/';
         this.apiRoutes = {
             getUser: this.apiRoot + 'users',
             createUser: this.apiRoot + 'users',
@@ -823,7 +823,7 @@ var AuthProvider = (function () {
 }());
 AuthProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["b" /* Events */], __WEBPACK_IMPORTED_MODULE_5__ionic_Storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["g" /* LoadingController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["b" /* Events */], __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["g" /* LoadingController */]])
 ], AuthProvider);
 
 var ApiRoutes = (function () {
@@ -842,8 +842,8 @@ var ApiRoutes = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TopLeaguesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_match_match__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__league_league__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_match_match__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__league_league__ = __webpack_require__(107);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -886,7 +886,7 @@ var TopLeaguesPage = (function () {
 }());
 TopLeaguesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-top-leagues',template:/*ion-inline-start:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/top-leagues/top-leagues.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>Top Leagues</ion-title>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <button ion-button block *ngFor="let league of topLeagues" (click)="openLeague(league)">{{ league }}</button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/top-leagues/top-leagues.html"*/
+        selector: 'page-top-leagues',template:/*ion-inline-start:"/home/miller/webs/oddsfinderapp/src/pages/top-leagues/top-leagues.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>Top Leagues</ion-title>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <button ion-button block *ngFor="let league of topLeagues" (click)="openLeague(league)">{{ league }}</button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/miller/webs/oddsfinderapp/src/pages/top-leagues/top-leagues.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__providers_match_match__["a" /* MatchProvider */]])
 ], TopLeaguesPage);
@@ -919,20 +919,20 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_Storage__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_social_sharing__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_social_sharing__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_matches_matches__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_settings_settings__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_login_login__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_top_leagues_top_leagues__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_match_match__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_match_detail_match_detail__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_league_league__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_match_detail_match_detail__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_league_league__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_status_bar__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_splash_screen__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_match_match__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_match_match__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_auth_auth__ = __webpack_require__(206);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -981,12 +981,12 @@ AppModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_5__ionic_Storage__["a" /* IonicStorageModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { loadChildren: '../pages/match/match.module#MatchPageModule', name: 'MatchPage', segment: 'match', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/league/league.module#LeaguePageModule', name: 'LeaguePage', segment: 'league', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/match-detail/match-detail.module#MatchDetailPageModule', name: 'MatchDetailPage', segment: 'match-detail', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/match-detail/match-detail.module#MatchDetailPageModule', name: 'MatchDetailPage', segment: 'match-detail', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/match/match.module#MatchPageModule', name: 'MatchPage', segment: 'match', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -1055,7 +1055,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/miller/webs/oddsfinderapp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/miller/webs/oddsfinderapp/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -1090,7 +1090,7 @@ var SettingsPage = (function () {
 }());
 SettingsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-settings',template:/*ion-inline-start:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/settings/settings.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>Settings</ion-title>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n</ion-content>\n'/*ion-inline-end:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/settings/settings.html"*/
+        selector: 'page-settings',template:/*ion-inline-start:"/home/miller/webs/oddsfinderapp/src/pages/settings/settings.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>Settings</ion-title>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n</ion-content>\n'/*ion-inline-end:"/home/miller/webs/oddsfinderapp/src/pages/settings/settings.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
 ], SettingsPage);
@@ -1099,16 +1099,16 @@ SettingsPage = __decorate([
 
 /***/ }),
 
-/***/ 48:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1127,7 +1127,7 @@ var MatchProvider = (function () {
     function MatchProvider(http) {
         this.http = http;
         // this.apiRoot = 'http://localhost:3080/api/';
-        this.apiRoot = 'https://oddsfinder-api.herokuapp.com/api/';
+        this.apiRoot = 'https://oddsfinderapi.herokuapp.com/api/';
         this.apiRoutes = {
             getMatches: this.apiRoot + 'matches',
             getMatchesByLeague: this.apiRoot + 'matches/league/',
@@ -1178,8 +1178,8 @@ var ApiRoutes = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match_detail_match_detail__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_social_sharing__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match_detail_match_detail__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_social_sharing__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1240,7 +1240,7 @@ var MatchPage = (function () {
         var options = {
             message: 'Check out these odds.',
             subject: 'OddsFinder Odds',
-            url: 'https://oddsfinder-app.herokuapp.com',
+            url: 'https://oddsfinderapp.herokuapp.com',
             chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title
         };
         this.socialSharing.shareWithOptions(options)
@@ -1255,7 +1255,7 @@ var MatchPage = (function () {
 }());
 MatchPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-match',template:/*ion-inline-start:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/match/match.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center *ngIf="!match">Match</ion-title>\n    <ion-title text-center *ngIf="match">{{ match.Team1 }} vs {{ match.Team2 }}</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title item-start>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-list *ngIf="match">\n    <!-- <ion-list-header>\n      <span class="psuedokey" item-end>{{ match.PsuedoKey }}</span>\n    </ion-list-header> -->\n    <ion-list-header>\n      {{ match.League }}\n    </ion-list-header>\n    <div *ngFor="let region of regions">\n      <ion-list-header class="match-league">\n        {{ region.name }}\n      </ion-list-header>\n      <ion-item class="match-instance" *ngFor="let matchInstance of region.matchInstances">\n        <img *ngIf="matchInstance.Service === \'Betway\'" src="assets/images/betway.png">\n        <img *ngIf="matchInstance.Service === \'MerryBet\'" src="assets/images/merrybet.png">\n        <img *ngIf="matchInstance.Service === \'PrincessBet\'" src="assets/images/princessbet.png">\n        <img *ngIf="matchInstance.Service === \'BetPawa\'" src="assets/images/betpawa.png">\n        <img *ngIf="matchInstance.Service === \'LovingBet\'" src="assets/images/lovingbet.png">\n        <div item-end>\n          <span (click)="share(matchInstance)" class="share">Share</span>\n          <span>{{ matchInstance.Team1.Price }}</span>\n          <span>{{ matchInstance.DrawPrice }}</span>\n          <span>{{ matchInstance.Team2.Price }}</span>\n        </div>\n      </ion-item>\n    </div>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/stevenhalase/Documents/oddsfinder-app/oddsfinder/src/pages/match/match.html"*/,
+        selector: 'page-match',template:/*ion-inline-start:"/home/miller/webs/oddsfinderapp/src/pages/match/match.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center *ngIf="!match">Match</ion-title>\n    <ion-title text-center *ngIf="match">{{ match.Team1 }} vs {{ match.Team2 }}</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-navbar class="logo">\n    <ion-title item-start>Odds<span class="text-accent--green">Finder</span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-list *ngIf="match">\n    <!-- <ion-list-header>\n      <span class="psuedokey" item-end>{{ match.PsuedoKey }}</span>\n    </ion-list-header> -->\n    <ion-list-header>\n      {{ match.League }}\n    </ion-list-header>\n    <div *ngFor="let region of regions">\n      <ion-list-header class="match-league">\n        {{ region.name }}\n      </ion-list-header>\n      <ion-item class="match-instance" *ngFor="let matchInstance of region.matchInstances">\n        <img *ngIf="matchInstance.Service === \'Betway\'" src="assets/images/betway.png">\n        <img *ngIf="matchInstance.Service === \'MerryBet\'" src="assets/images/merrybet.png">\n        <img *ngIf="matchInstance.Service === \'PrincessBet\'" src="assets/images/princessbet.png">\n        <img *ngIf="matchInstance.Service === \'BetPawa\'" src="assets/images/betpawa.png">\n        <img *ngIf="matchInstance.Service === \'LovingBet\'" src="assets/images/lovingbet.png">\n        <img *ngIf="matchInstance.Service === \'SportPesa\'" src="assets/images/sportpesa.png">\n        <div item-end>\n          <span (click)="share(matchInstance)" class="share">Share</span>\n          <span>{{ matchInstance.Team1.Price }}</span>\n          <span>{{ matchInstance.DrawPrice }}</span>\n          <span>{{ matchInstance.Team2.Price }}</span>\n        </div>\n      </ion-item>\n    </div>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/miller/webs/oddsfinderapp/src/pages/match/match.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_social_sharing__["a" /* SocialSharing */]])
 ], MatchPage);

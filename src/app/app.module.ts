@@ -3,7 +3,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
-import { IonicStorageModule } from '@ionic/Storage';
+import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
